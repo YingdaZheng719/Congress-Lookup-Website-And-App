@@ -1,0 +1,36 @@
+
+    
+
+<!-- Table -->
+<div id="senate_content" class="well panel panel-default">
+    <div id="senate_header" class="panel-heading">
+      <span>Legislators By Senate</span>
+      <div id="senate_input">
+          <input type="text" id="senate_filter" placeholder="  Search" ng-model="query">
+      </div>
+    </div>
+    
+    <div id="senate_table">
+        <table class="table table-hover">
+            <tr>
+                <th>Party</th><th>Name</th><th>Chamber</th><th>District</th><th>State</th><th></th>
+            </tr>
+            <tr dir-paginate="legislator in legislators | filter:query | itemsPerPage: 10" 
+                pagination-id="senate_table">
+                <td><img src="images/{{party_img(legislator.party)}}.png" class="icon"></td>
+                <td>{{legislator.first_name}} {{legislator.last_name}}</td>
+                <td><img class="icon" src='images/{{legislator.chamber}}1.png'> {{legislator.chamber}}</td>
+                <td>{{legislator.district}}</td>
+                <td>{{legislator.state_name}}</td>
+                <td><a href="#!/legislator-details/{{legislator.bioguide_id}}">View Details</a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="pagination_bar">
+        <dir-pagination-controls
+            template-url="external_module/dirPagination.tpl.html"
+            pagination-id="senate_table"
+        ></dir-pagination-controls>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<!-- header -->
+<header id="h_section">
+    <h1>Legislators</h1>
+</header>
+<hr>
+
+<!-- navigator -->
+<div id="nav_secondary" class="well">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#by_state" aria-controls="by_state" role="tab" data-toggle="tab">By State</a></li>
+    <li role="presentation"><a href="#house" aria-controls="house" role="tab" data-toggle="tab">House</a></li>
+    <li role="presentation"><a href="#senate" aria-controls="senate" role="tab" data-toggle="tab">Senate</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="by_state">
+        <by-state-table></by-state-table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="house">
+        <house-table></house-table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="senate">
+        <senate-table></senate-table>
+    </div>
+  </div>
+</div>

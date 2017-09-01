@@ -1,0 +1,81 @@
+<div id="sec_content" class="toggled">
+    <!-- header -->
+    <header id="h_section">
+        <h1>Bills</h1>
+    </header>
+    <hr>
+
+    <div class="well">
+        <div id="details_header" class="panel-heading">
+            <a href="#">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" ng-click="back()"></span>
+            </a>
+            <span>Details</span>
+            <a href="" class="favor_star" ng-click="changeFavorite(bill_id)">
+              <span id="favor_star_bill" class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </a>
+        </div>
+        <hr>
+        
+        <div id="legis_details" class="row">
+            <div class="col-xs-12 col-sm-8 col-md-6">
+                <hr>
+                <div id="other_info">
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Bill ID: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{bill_details.bill_id}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Title: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{bill_details.official_title}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Bill Type: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{bill_details.bill_type}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Sponsor: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">
+                            {{bill_details.sponsor.title}}, {{bill_details.sponsor.last_name}}, {{bill_details.sponsor.first_name}}
+                        </span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Chamber: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{bill_details.chamber}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Status: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{bill_status}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Introduced On: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{bill_details.introduced_on}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Congress URL: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">
+                            <a href="{{bill_details.congress}}">URL</a>
+                        </span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Version Status: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{bill_details.last_version.version_name}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Bill URL: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">
+                            <a href="{{bill_details.versions.urls.pdf}}">Link</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8 col-md-6 sm_view_remove">
+                <div class="embed-responsive">
+                  <iframe class="embed-responsive-item" src="{{bill_details.versions.urls.pdf}}"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

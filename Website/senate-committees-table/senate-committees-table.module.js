@@ -1,0 +1,1 @@
+angular.module('senateCommitteesTable', ['angularUtils.directives.dirPagination']);

@@ -1,0 +1,1 @@
+angular.module('senateTable', ['angularUtils.directives.dirPagination']);

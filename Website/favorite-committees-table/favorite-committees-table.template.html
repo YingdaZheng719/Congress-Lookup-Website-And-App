@@ -1,0 +1,39 @@
+
+    
+
+<!-- Table -->
+<div id="favorite_committees_content" class="well panel panel-default">
+    <div id="favorite_committees_header" class="panel-heading">
+      <span>Favorite Committees</span>
+    </div>
+    
+    <div id="favorite_committees_table">
+        <table class="table table-hover">
+            <tr>
+                <th></th><th>Chamber</th><th>Committee ID</th><th>Name</th><th>Parent Committee</th><th>Sub Committee</th><th>
+            </tr>
+            <tr dir-paginate="committee in committeeList | itemsPerPage: 10" 
+                pagination-id="favorite_committees_table">
+                <td>
+                    <a href="" class="delete_trash" ng-click="removeCommittee(committee.committee_id)"> 
+                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </a>
+                </td>
+                <td><img class="icon" src='images/{{committee.chamber}}1.png'> {{committee.chamber}}</td>
+                <td>{{committee.committee_id}}</td>
+                <td>{{committee.name}}</td>
+                <td>{{committee.parent_committee_id}}</td>
+                <td>{{committee.subcommittee}}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="pagination_bar">
+        <dir-pagination-controls
+            template-url="external_module/dirPagination.tpl.html"
+            pagination-id="favorite_committees_table"
+        ></dir-pagination-controls>
+    </div>
+</div>
+    
+

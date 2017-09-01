@@ -1,0 +1,24 @@
+<!-- header -->
+<header id="h_section">
+    <h1>Bills</h1>
+</header>
+<hr>
+
+<!-- navigator -->
+<div id="nav_secondary" class="well">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#active_bills" aria-controls="active_bills" role="tab" data-toggle="tab">Active Bills</a></li>
+    <li role="presentation"><a href="#new_bills" aria-controls="new_bills" role="tab" data-toggle="tab">New Bills</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="active_bills">
+        <active-bills-table></active-bills-table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="new_bills">
+        <new-bills-table></new-bills-table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<!-- header -->
+<header id="h_section">
+    <h1>Favorites</h1>
+</header>
+<hr>
+
+<!-- navigator -->
+<div id="nav_secondary" class="well">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#favorite_legislators" aria-controls="favorite_legislators" role="tab" data-toggle="tab">Legislators</a></li>
+    <li role="presentation"><a href="#favorite_bills" aria-controls="favorite_bills" role="tab" data-toggle="tab">Bills</a></li>
+    <li role="presentation"><a href="#favorite_committees" aria-controls="favorite_committees" role="tab" data-toggle="tab">Committees</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="favorite_legislators">
+        <favorite-legislators-table></favorite-legislators-table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="favorite_bills">
+        <favorite-bills-table></favorite-bills-table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="favorite_committees">
+        <favorite-committees-table></favorite-committees-table>
+    </div>
+  </div>
+</div>

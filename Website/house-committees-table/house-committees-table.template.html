@@ -1,0 +1,40 @@
+
+    
+<div id="house_committees_content" class="well panel panel-default">
+    <div id="house_committees_header" class="panel-heading">
+      <span>House</span>
+      <div id="house_committees_input">
+          <input type="text" id="house_committees_filter" placeholder="  Search" ng-model="query">
+      </div>
+    </div>
+    
+    <div id="house_committees_table">
+        <table class="table table-hover">
+            <tr>
+                <th></th><th>Chamber</th><th>Committee ID</th><th>Name</th><th>Parent Committee</th><th>Contact</th><th>Office</th>
+            </tr>
+            <tr dir-paginate="committee in committees | filter:query | itemsPerPage: 10" 
+                pagination-id="house_committees_table">
+                <td>
+                    <a href="" class="favor_star" ng-click="changeFavorite(committee.committee_id)">
+                      <span class="favor_star_committee glyphicon glyphicon-star {{committee_favorite[committee.committee_id]}}" aria-hidden="true"></span>
+                    </a>
+                </td>
+                <td><img class="icon" src='images/{{committee.chamber}}1.png'> {{committee.chamber}}</td>
+                <td>{{committee.committee_id}}</td>
+                <td>{{committee.name}}</td>
+                <td>{{committee.parent_committee_id}}</td>
+                <td>{{committee.phone}}</td>
+                <td>{{committee.office}}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="pagination_bar">
+        <dir-pagination-controls
+            template-url="external_module/dirPagination.tpl.html"
+            pagination-id="house_committees_table"
+        ></dir-pagination-controls>
+    </div>
+</div>
+

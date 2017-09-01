@@ -1,0 +1,28 @@
+<!-- header -->
+<header id="h_section">
+    <h1>Committees</h1>
+</header>
+<hr>
+
+<!-- navigator -->
+<div id="nav_secondary" class="well">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#house_committees" aria-controls="house_committees" role="tab" data-toggle="tab">House</a></li>
+    <li role="presentation"><a href="#senate_committees" aria-controls="senate_committees" role="tab" data-toggle="tab">Senate</a></li>
+    <li role="presentation"><a href="#joint_committees" aria-controls="joint_committees" role="tab" data-toggle="tab">Joint</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="house_committees">
+        <house-committees-table></house-committees-table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="senate_committees">
+        <senate-committees-table></senate-committees-table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="joint_committees">
+        <joint-committees-table></joint-committees-table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,145 @@
+<div id="sec_content" class="toggled">
+    <!-- header -->
+    <header id="h_section">
+        <h1>Legislators</h1>
+    </header>
+    <hr>
+
+    <div class="well container-fluid">
+        <div id="details_header" class="panel-heading">
+            <a href="">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" ng-click="back()"></span>
+            </a>
+            <span>Details</span>
+            <a href="" class="favor_star" ng-click="changeFavorite(bioguide_id)">
+              <span id="favor_star_legislator" class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </a>
+        </div>
+        <hr>
+        
+        <div id="legis_details" class="row">
+            <div class="col-xs-12 col-sm-8 col-md-5">
+                <hr>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-4 col-md-4" id="photo">
+                        <img src="https://theunitedstates.io/images/congress/original/{{bioguide_id}}.jpg">
+                    </div>
+                    <div class="col-xs-10 col-sm-8 col-md-8" id="basic_info">
+                        <hr>
+                        <div>
+                            <span>{{legislator_details.title}}, </span>
+                            <span>{{legislator_details.last_name}}, </span>
+                            <span>{{legislator_details.first_name}}</span>
+                        </div><hr>
+                        <div><span>Email: </span><span>{{legislator_details.oc_email}}</span></div><hr>
+                        <div><span>Chamber: </span><span>{{legislator_details.chamber}}</span></div><hr>
+                        <div><span>Contact: </span><span>{{legislator_details.phone}}</span></div><hr>
+                        <div><img src="images/{{legislator_party}}.png"><span>{{legislator_party}}</span></div>
+                    </div>
+                </div>
+                <div id="other_info">
+                    <hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Start Term: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{legislator_details.term_start}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">End Term: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{legislator_details.term_end}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Term: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="{{term_percetage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{term_percetage}}%;">
+                                {{term_percetage}}%
+                              </div>
+                            </div>
+                        </span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Office: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{legislator_details.office}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">State: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{legislator_details.state_name}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Fax: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{legislator_details.fax}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Birthday: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">{{legislator_details.birthday}}</span>
+                    </div><hr>
+                    <div class="row">
+                        <span class="col-xs-3 col-sm-3 col-md-3">Social Links: </span>
+                        <span class="col-xs-9 col-sm-9 col-md-9">
+                            <a href="https://twitter.com/{{legislator_details.twitter_id}}">
+                                <img src="images/twitter.png"></a>
+                            <a href="https://facebook.com/{{legislator_details.facebook_id}}">
+                                <img src="images/facebook.png"></a>
+                            <a href="{{legislator_details.website}}">
+                                <img src="images/w.png"></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-8 col-md-7">
+                <div id="legis_committees_header">Committees</div>
+                <div id="legis_committees">
+                    <table>
+                        <tr>
+                            <th>Chamber</th>
+                            <th>Committee ID</th>
+                            <th class="sm_view_remove">Name</th>
+                        </tr>
+                        <tr ng-repeat="committee in legislator_committees">
+                            <td>{{committee.chamber}}</td>
+                            <td>{{committee.committee_id}}</td>
+                            <td class="sm_view_remove">{{committee.name}}</td>
+                        </tr>
+<!--
+                        <tr class="row">
+                            <th class="col-xs-3">Chamber</th>
+                            <th class="col-xs-3">Committee ID</th>
+                            <th class="col-xs-6">Name</th>
+                        </tr>
+                        <tr class="row" ng-repeat="committee in legislator_committees">
+                            <td class="col-xs-3">{{committee.chamber}}</td>
+                            <td class="col-xs-3">{{committee.committee_id}}</td>
+                            <td class="col-xs-6">{{committee.name}}</td>
+                        </tr>
+-->
+                    </table>
+                </div>
+                <div id="legis_bills_header">Bills</div>
+                <div id="legis_bills">
+                    <table>
+                        <tr>
+                            <th>Bills ID</th>
+                            <th class="sm_view_remove">Title</th>
+                            <th class="sm_view_remove">Chamber</th>
+                            <th class="sm_view_remove">Bill Type</th>
+                            <th class="sm_view_remove">Congress</th>
+                            <th>Link</th>
+
+                        </tr>
+                        <tr ng-repeat="bill in legislator_bills">
+                            <td>{{bill.bill_id}}</td>
+                            <td class="sm_view_remove">{{bill.official_title}}</td>
+                            <td class="sm_view_remove">{{bill.chamber}}</td>
+                            <td class="sm_view_remove">{{bill.bill_type}}</td>
+                            <td class="sm_view_remove">{{bill.congress}}</td>
+                            <td>
+                                <a href="{{bill.last_version.urls.pdf}}">Link</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

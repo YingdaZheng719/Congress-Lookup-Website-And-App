@@ -1,0 +1,46 @@
+
+    
+
+<!-- Table -->
+<div id="by_state_content" class="well panel panel-default container-fluid">
+    <div id="by_state_header" class="panel-heading">
+      <span>Legislators By State</span>
+      <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdown_by_state" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{state}}
+            <span class="caret"></span>
+          </button>
+          <ul id="dropdown_menu_by_state" class="dropdown-menu" aria-labelledby="dropdown_by_state">
+            <li ng-repeat="state in states" ng-click="stateChanged(state)"><a href="">{{state}}</a></li>
+          </ul>
+      </div>
+    </div>
+    
+    <div id="by_state_table">
+        <table class="table table-hover">
+            <tr>
+                <th>Party</th><th>Name</th><th>Chamber</th><th>District</th><th>State</th><th></th>
+            </tr>
+            <tr dir-paginate="legislator in legislators | itemsPerPage: legislatorsPerPage" 
+                total-items="totalLegislators"
+                current-page="pagination.current"
+                pagination-id="by_state_table">
+                <td><img src="images/{{party_img(legislator.party)}}.png" class="icon"></td>
+                <td>{{legislator.first_name}} {{legislator.last_name}}</td>
+                <td><img class="icon" src='images/{{legislator.chamber}}1.png'> {{legislator.chamber}}</td>
+                <td>{{legislator.district}}</td>
+                <td>{{legislator.state_name}}</td>
+                <td><a href="#!/legislator-details/{{legislator.bioguide_id}}">View Details</a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="pagination_bar">
+        <dir-pagination-controls
+        template-url="external_module/dirPagination.tpl.html"
+        on-page-change="pageChanged(newPageNumber)"
+        pagination-id="by_state_table"
+        ></dir-pagination-controls>
+    </div>
+</div>
+    
+

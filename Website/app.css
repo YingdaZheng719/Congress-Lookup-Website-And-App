@@ -1,0 +1,311 @@
+body {
+    background-color: rgba(238, 239, 237, 0.2);
+}
+
+.yellow {
+    color: #ebef6b;
+}
+
+.white {
+}
+
+.pagination_bar {
+    width: 58%;
+    margin: auto;
+}
+
+.table tr {
+    width: 90%;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.table_container {
+    border: 0;
+    display: table;
+    width: 100%;
+}
+
+.sidebar_table_cell{
+    display: table-cell;
+    width: 17%;
+}
+.content_table_cell {
+    display: table-cell;
+    width: 83%;
+}
+
+
+/*------------------------------header--------------------------------*/
+
+#h_primary{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+}
+
+#h_primary button {
+    float: left;
+    height: 100%;
+    margin: 0;
+}
+
+#h_primary h1 {
+    width: 160px;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 450px;
+}
+
+#h_primary h1 img {
+    vertical-align: top;
+    width: 30%;
+    height: 100%;
+    margin-right: 10px    
+}
+
+#h_primary h1 span {
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    line-height: 100%;
+    font-size: 0.4em;
+    font-weight: bold;
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+/*-------------------------------nav---------------------------------*/
+
+#nav_primary {
+    background-color: rgba(80, 80, 80, 1);
+    color: white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#nav_primary_ul {
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav_primary_ul li {
+    font-size: 1.2em;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
+    list-style: none;
+    overflow: hidden;
+}
+
+#nav_primary_ul a {
+    text-decoration: none;
+    color: white;
+}
+
+/*-----------------------------section-------------------------------*/
+
+
+#sec_content {
+    padding: 20px;
+/*    min-width: 750px;*/
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#h_section h1 {
+    font-size: 2em;
+}
+
+hr {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+#nav_secondary {
+    padding: 0;
+    background-color: white;
+}
+
+#by_state_content, #house_content, #senate_content, 
+#active_bills_content, #new_bills_content, 
+#house_committees_content, #senate_committees_content, #joint_committees_content,
+#favorite_legislators_content, #favorite_bills_content, #favorite_committees_content {
+    margin: 20px;
+    padding: 0;
+    background-color: white;
+}
+
+#by_state_header, #house_header, #senate_header, 
+#active_bills_header, #new_bills_header, 
+#house_committees_header, #senate_committees_header, #joint_committees_header,
+#favorite_legislators_header, #favorite_bills_header, #favorite_committees_header {
+    padding: 0;
+    background-color: rgba(238, 239, 237, 0.2);
+}
+
+#by_state_header span, #house_header span, #senate_header span,
+#active_bills_header span, #new_bills_header span,
+#house_committees_header span, #senate_committees_header span, #joint_committees_header span,
+#favorite_legislators_header span,  #favorite_bills_header span, #favorite_committees_header span {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    font-size: 1.1em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    height: 40px;
+    width: 130px;
+    margin-top: 5px;
+    margin-right: 10px;
+    
+}
+.dropdown button {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#by_state_table, #house_table, #senate_table, 
+#active_bills_table, #new_bills_table, 
+#house_committees_table, #senate_committees_table, #joint_committees_table,
+#favorite_legislators_table,  #favorite_bills_table, #favorite_committees_table {
+    margin: 15px;
+    padding: 0;
+}
+
+
+#house_input, #senate_input, 
+#active_bills_input, #new_bills_input, 
+#house_committees_input, #senate_committees_input, #joint_committees_input {
+    position: relative;
+    width: 20%;
+    float: right;
+    margin: 12px;
+}
+#house_input input, #senate_input input, 
+#active_bills_input input, #new_bills_input input, 
+#house_committees_input input, #senate_committees_input input, #joint_committees_input input {
+    width: 100%;
+}
+
+
+/*-------------------------legislator details--------------------------------*/
+
+#details_header {
+    font-size: 1.5em;
+}
+
+.favor_star {
+    float: right;
+}
+
+#legis_details hr {
+    margin: 8px 0px;
+}
+
+#legis_details th, #legis_details td {
+    border-bottom: 1px solid #ddd;
+}
+
+#photo img {
+    width: 100%;
+    margin-left: 10px;
+}
+
+#basic_info img, #other_info img {
+    width: 20px;
+}
+
+
+
+#legis_committees_header, #legis_bills_header {
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+#legis_bills th, #legis_bills td, #legis_committees th, #legis_committees td { 
+    padding: 5px;
+    min-width: 0;
+}
+    
+/*------------  responsive  -------------*/
+@media (max-width: 992px) {
+    #nav_primary_ul {
+        width: 50px;
+    }
+    .sidebar_tag {
+        display: none;
+    }
+    .sidebar_table_cell {
+        width: 5%;
+    }
+    .content_table_cell {
+        width: 95%;
+    }
+    
+    #h_primary h1 {
+        margin-left: 250px;
+    }
+    
+    #by_state_content, #house_content, #senate_content, 
+    #active_bills_content, #new_bills_content, 
+    #house_committees_content, #senate_committees_content, #joint_committees_content,
+    #favorite_legislators_content, #favorite_bills_content, #favorite_committees_content {
+        margin: 0px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .pagination_bar {
+        width: 100%;
+    }
+    #h_primary h1 {
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sm_view_remove {
+        float: right;
+        display: none;
+    }
+}
+
+/*------------  toggle  -------------*/
+.sidebar_toggle {
+    width: 0 !important;
+    
+}
+.content_toggle {
+    width: 100% !important;
+    
+}
+.sidebar_ul_toggle, .sidebar_li_toggle {
+    width: 0 !important;
+}
+

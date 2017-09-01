@@ -1,0 +1,41 @@
+
+    
+
+<!-- Table -->
+<div id="favorite_bills_content" class="well panel panel-default">
+    <div id="favorite_bills_header" class="panel-heading">
+      <span>Favorite Bills</span>
+    </div>
+    
+    <div id="favorite_bills_table">
+        <table class="table table-hover">
+            <tr>
+                <th></th><th>Bill ID</th><th>Title</th><th>Chamber</th><th>Introduced on</th><th>Sponsor</th><th></th>
+            </tr>
+            <tr dir-paginate="bill in billList | itemsPerPage: 5" 
+                pagination-id="favorite_bills_table">
+                <td>
+                    <a href="" class="delete_trash" ng-click="removeBill(bill.bill_id)">
+                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </a>
+                </td>
+                <td>{{bill.bill_id}}</td>
+                <td>{{bill.bill_type}}</td>
+                <td>{{bill.official_title}}</td>
+                <td><img class="icon" src='images/{{bill.chamber}}1.png'> {{bill.chamber}}</td>
+                <td>{{bill.introduced_on}}</td>
+                <td>{{bill.sponsor.title}}, {{bill.sponsor.last_name}}, {{bill.sponsor.first_name}}</td>
+                <td><a href="#!/bill-details/{{bill.bill_id}}">View Details</a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="pagination_bar">
+        <dir-pagination-controls
+            template-url="external_module/dirPagination.tpl.html"
+            pagination-id="favorite_bills_table"
+        ></dir-pagination-controls>
+    </div>
+</div>
+    
+

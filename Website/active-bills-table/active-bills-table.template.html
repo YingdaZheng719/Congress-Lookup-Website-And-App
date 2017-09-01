@@ -1,0 +1,36 @@
+
+    
+<div id="active_bills_content" class="well panel panel-default">
+    <div id="active_bills_header" class="panel-heading">
+      <span>Active Bills</span>
+      <div id="active_bills_input">
+          <input type="text" id="active_bills_filter" placeholder="  Search" ng-model="query">
+      </div>
+    </div>
+    
+    <div id="active_bills_table">
+        <table class="table table-hover">
+            <tr>
+                <th>Bill ID</th><th>Bill Type</th><th>Title</th><th>Chamber</th><th>Introduced On</th><th>Sponsor</th><th></th>
+            </tr>
+            <tr dir-paginate="bill in bills | filter:query | itemsPerPage: 5" 
+                pagination-id="active_bills_table">
+                <td>{{bill.bill_id}}</td>
+                <td>{{bill.bill_type}}</td>
+                <td>{{bill.official_title}}</td>
+                <td><img class="icon" src='images/{{bill.chamber}}1.png'> {{bill.chamber}}</td>
+                <td>{{bill.introduced_on}}</td>
+                <td>{{bill.sponsor.title}}, {{bill.sponsor.last_name}}, {{bill.sponsor.first_name}}</td>
+                <td><a href="#!/bill-details/{{bill.bill_id}}">View Details</a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="pagination_bar">
+        <dir-pagination-controls
+            template-url="external_module/dirPagination.tpl.html"
+            pagination-id="active_bills_table"
+        ></dir-pagination-controls>
+    </div>
+</div>
+

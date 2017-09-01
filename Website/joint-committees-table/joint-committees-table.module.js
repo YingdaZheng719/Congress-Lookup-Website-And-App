@@ -1,0 +1,1 @@
+angular.module('jointCommitteesTable', ['angularUtils.directives.dirPagination']);

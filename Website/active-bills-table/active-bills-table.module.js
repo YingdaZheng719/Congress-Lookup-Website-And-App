@@ -1,0 +1,1 @@
+angular.module('activeBillsTable', ['angularUtils.directives.dirPagination']);

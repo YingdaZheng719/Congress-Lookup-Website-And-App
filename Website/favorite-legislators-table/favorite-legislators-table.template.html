@@ -1,0 +1,44 @@
+
+    
+
+<!-- Table -->
+<div id="favorite_legislators_content" class="well panel panel-default">
+    <div id="favorite_legislators_header" class="panel-heading">
+      <span>Legislators By State</span>
+    </div>
+    
+    <div id="favorite_legislators_table">
+        <table class="table table-hover">
+            <tr>
+                <th></th><th>Image</th><th>Party</th><th>Name</th><th>Chamber</th><th>State</th><th>Email</th><th></th>
+            </tr>
+            <tr dir-paginate="legislator in legislatorList | itemsPerPage: 10" 
+                pagination-id="favorite_legislators_table">
+                <td>
+                    <a href="" class="delete_trash" ng-click="removeLegislator(legislator.bioguide_id)">
+                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </a>
+                </td>
+                <td>
+                    <img src="https://theunitedstates.io/images/congress/original/{{legislator.bioguide_id}}.jpg"
+                         class="icon">
+                </td>
+                <td>{{legislator.party}}</td>
+                <td>{{legislator.first_name}} {{legislator.last_name}}</td>
+                <td><img class="icon" src='images/{{legislator.chamber}}1.png'> {{legislator.chamber}}</td>
+                <td>{{legislator.state_name}}</td>
+                <td>{{legislator.oc_email}}</td>
+                <td><a href="#!/legislator-details/{{legislator.bioguide_id}}">View Details</a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="pagination_bar">
+        <dir-pagination-controls
+            template-url="external_module/dirPagination.tpl.html"
+            pagination-id="favorite_legislators_table"
+        ></dir-pagination-controls>
+    </div>
+</div>
+    
+
