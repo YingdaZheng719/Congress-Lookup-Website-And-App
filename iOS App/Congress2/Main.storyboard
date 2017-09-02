@@ -1,0 +1,1501 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I8I-WZ-F5j">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Committee Tab Bar Controller-->
+        <scene sceneID="mWy-UC-46s">
+            <objects>
+                <tabBarController storyboardIdentifier="CommitteeView" id="v4l-DA-aON" customClass="CommitteeTabBarController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="s0q-Pr-9qy"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Edl-xN-WgF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CPP-vu-j5o" kind="relationship" relationship="viewControllers" id="Egh-lm-NrR"/>
+                        <segue destination="Fcq-ds-Uxb" kind="relationship" relationship="viewControllers" id="DDP-D5-GmH"/>
+                        <segue destination="DEt-kK-dvY" kind="relationship" relationship="viewControllers" id="KbT-HM-JJJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyR-dm-3UZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="1620"/>
+        </scene>
+        <!--Committees-->
+        <scene sceneID="Qwa-qG-kVy">
+            <objects>
+                <viewController storyboardIdentifier="CommitteeJointViewController" id="YCG-Ic-8KA" customClass="JointCommitteesViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ms9-FH-A4Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="URd-UN-BFD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9VC-SQ-zXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p8d-ta-lL3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JointCommitteesCell" rowHeight="70" id="OY8-0F-YJl" customClass="JointCommitteesTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OY8-0F-YJl" id="FNc-En-KZP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8g-nI-CXx">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42j-3A-X2h">
+                                                    <rect key="frame" x="8" y="37" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="committeeIDLabel" destination="42j-3A-X2h" id="WH1-Gh-gWC"/>
+                                            <outlet property="committeeNameLabel" destination="g8g-nI-CXx" id="ujQ-aP-mpI"/>
+                                            <segue destination="nAX-YD-h7q" kind="show" identifier="showDetails" id="ZDd-L2-bNL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Committees" id="7yz-Na-PsJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="jcn-nC-LR0">
+                            <connections>
+                                <action selector="search_btn:" destination="YCG-Ic-8KA" id="dsd-GW-Soe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="jcn-nC-LR0" id="8uq-6y-gXS"/>
+                        <outlet property="tableView" destination="p8d-ta-lL3" id="nvo-8S-AHu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAe-MA-HS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="2300.5997001499254"/>
+        </scene>
+        <!--Committees-->
+        <scene sceneID="aap-WR-seH">
+            <objects>
+                <viewController storyboardIdentifier="CommitteeSenateViewController" id="x4D-cb-FGn" customClass="SenateCommitteesViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2kD-kw-ASq"/>
+                        <viewControllerLayoutGuide type="bottom" id="TwE-3t-lYj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YQH-wU-TRK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUa-Ds-YS4">
+                                <rect key="frame" x="0.0" y="28" width="375" height="595"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenateCommitteesCell" rowHeight="70" id="k2u-qo-tK8" customClass="SenateCommitteesTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k2u-qo-tK8" id="rck-Sm-Aec">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idR-FA-XdB">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5F-YQ-0pi">
+                                                    <rect key="frame" x="8" y="37" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="committeeIDLabel" destination="p5F-YQ-0pi" id="eM2-cI-bOM"/>
+                                            <outlet property="committeeNameLabel" destination="idR-FA-XdB" id="PkP-4H-DKd"/>
+                                            <segue destination="nAX-YD-h7q" kind="show" identifier="showDetails" id="X8C-RI-Tsj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Committees" id="0wL-9z-3iL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="frC-Ea-0Is">
+                            <connections>
+                                <action selector="search_btn:" destination="x4D-cb-FGn" id="aHt-6W-VN2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="frC-Ea-0Is" id="O0d-Bx-3HD"/>
+                        <outlet property="tableView" destination="uUa-Ds-YS4" id="CXM-Em-qHc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COz-Hb-ifX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="1619.6401799100452"/>
+        </scene>
+        <!--Committee Details-->
+        <scene sceneID="Sth-bL-JDk">
+            <objects>
+                <viewController storyboardIdentifier="CommitteeDetailsViewController" id="nAX-YD-h7q" customClass="CommitteeDetailsViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="21F-IO-vAl"/>
+                        <viewControllerLayoutGuide type="bottom" id="PS7-kr-J2R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nho-ql-9v3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onH-2A-U8q">
+                                <rect key="frame" x="16" y="95" width="343" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="YUz-2k-5ZU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-Ai-g7C">
+                                <rect key="frame" x="0.0" y="258" width="375" height="360"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommitteeDetailsCell" id="nOu-ZI-b8G" customClass="CommitteeDetailsTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nOu-ZI-b8G" id="uKG-eF-2tA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-eI-Fb5">
+                                                    <rect key="frame" x="31" y="11.5" width="114" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="114" id="SDz-bU-4XX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMo-nE-dd5">
+                                                    <rect key="frame" x="166" y="11.5" width="184" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lMo-nE-dd5" firstAttribute="leading" secondItem="9Uz-eI-Fb5" secondAttribute="trailing" constant="21" id="1Ij-d7-Cd7"/>
+                                                <constraint firstItem="9Uz-eI-Fb5" firstAttribute="baseline" secondItem="lMo-nE-dd5" secondAttribute="baseline" id="GYu-0R-NVn"/>
+                                                <constraint firstItem="9Uz-eI-Fb5" firstAttribute="centerY" secondItem="uKG-eF-2tA" secondAttribute="centerY" id="Tpt-OR-8W4"/>
+                                                <constraint firstItem="9Uz-eI-Fb5" firstAttribute="leading" secondItem="uKG-eF-2tA" secondAttribute="leadingMargin" constant="23" id="fVU-nQ-zkE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lMo-nE-dd5" secondAttribute="trailing" constant="17" id="ija-fb-rdb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailContentLabel" destination="lMo-nE-dd5" id="3ZB-eD-BdU"/>
+                                            <outlet property="detailHeaderLabel" destination="9Uz-eI-Fb5" id="71I-FA-Hhr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="onH-2A-U8q" firstAttribute="top" secondItem="21F-IO-vAl" secondAttribute="bottom" constant="31" id="9X1-ia-3Mh"/>
+                            <constraint firstItem="Mb9-Ai-g7C" firstAttribute="leading" secondItem="Nho-ql-9v3" secondAttribute="leading" id="KO4-Ql-Tf8"/>
+                            <constraint firstItem="Mb9-Ai-g7C" firstAttribute="bottom" secondItem="PS7-kr-J2R" secondAttribute="top" id="Tc3-SF-Idf"/>
+                            <constraint firstItem="onH-2A-U8q" firstAttribute="leading" secondItem="Nho-ql-9v3" secondAttribute="leadingMargin" id="bUc-53-adS"/>
+                            <constraint firstItem="onH-2A-U8q" firstAttribute="trailing" secondItem="Nho-ql-9v3" secondAttribute="trailingMargin" id="hSE-nb-UrP"/>
+                            <constraint firstItem="onH-2A-U8q" firstAttribute="centerX" secondItem="Mb9-Ai-g7C" secondAttribute="centerX" id="vRC-bH-cmF"/>
+                            <constraint firstItem="Mb9-Ai-g7C" firstAttribute="top" secondItem="onH-2A-U8q" secondAttribute="bottom" constant="38" id="yqz-w4-yHi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Committee Details" id="Emg-t6-9gA">
+                        <barButtonItem key="rightBarButtonItem" image="empty_star" id="x8H-qC-5vW">
+                            <inset key="imageInsets" minX="25" minY="15" maxX="0.0" maxY="15"/>
+                            <connections>
+                                <action selector="favorite_btn:" destination="nAX-YD-h7q" id="RJG-gk-BdA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="committeeNameLabel" destination="onH-2A-U8q" id="nHx-yO-cMa"/>
+                        <outlet property="favoriteButton" destination="x8H-qC-5vW" id="UY8-kn-fy0"/>
+                        <outlet property="tableView" destination="Mb9-Ai-g7C" id="0vb-pf-O3C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hC6-VS-9Xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4716" y="1619.6401799100452"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="Qmc-eL-knZ">
+            <objects>
+                <viewController storyboardIdentifier="AboutView" id="HJg-Fi-jSY" customClass="AboutViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ak8-Mo-dzB"/>
+                        <viewControllerLayoutGuide type="bottom" id="xPh-50-Bph"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LCD-47-DRC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_photo" translatesAutoresizingMaskIntoConstraints="NO" id="03U-TE-Iub">
+                                <rect key="frame" x="67" y="60" width="241" height="231"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yingda Zheng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7a-FM-PTr">
+                                <rect key="frame" x="94" y="350" width="187" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0aR-s8-kix"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USC ID: 6815742028" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABF-iF-F8p">
+                                <rect key="frame" x="94" y="392" width="187" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ucV-Na-Mk4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o7a-FM-PTr" firstAttribute="trailing" secondItem="ABF-iF-F8p" secondAttribute="trailing" id="C1Y-ox-9go"/>
+                            <constraint firstItem="03U-TE-Iub" firstAttribute="leading" secondItem="LCD-47-DRC" secondAttribute="leadingMargin" constant="51" id="FLN-hK-qI4"/>
+                            <constraint firstItem="o7a-FM-PTr" firstAttribute="leading" secondItem="ABF-iF-F8p" secondAttribute="leading" id="GTT-1R-CQl"/>
+                            <constraint firstItem="o7a-FM-PTr" firstAttribute="leading" secondItem="LCD-47-DRC" secondAttribute="leadingMargin" constant="78" id="RQK-EG-DQA"/>
+                            <constraint firstItem="03U-TE-Iub" firstAttribute="centerX" secondItem="o7a-FM-PTr" secondAttribute="centerX" id="Uju-uh-OLG"/>
+                            <constraint firstItem="03U-TE-Iub" firstAttribute="top" secondItem="ak8-Mo-dzB" secondAttribute="bottom" constant="40" id="V6K-Hs-gXW"/>
+                            <constraint firstItem="xPh-50-Bph" firstAttribute="top" secondItem="ABF-iF-F8p" secondAttribute="bottom" constant="254" id="aCI-mg-52m"/>
+                            <constraint firstItem="o7a-FM-PTr" firstAttribute="top" secondItem="03U-TE-Iub" secondAttribute="bottom" constant="59" id="hYA-fy-PTA"/>
+                            <constraint firstItem="ABF-iF-F8p" firstAttribute="top" secondItem="o7a-FM-PTr" secondAttribute="bottom" constant="21" id="u3o-aj-wxu"/>
+                            <constraint firstItem="03U-TE-Iub" firstAttribute="centerX" secondItem="LCD-47-DRC" secondAttribute="centerX" id="xVT-VX-mhg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biE-ZA-BWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="5260"/>
+        </scene>
+        <!--Legislator Tab Bar Controller-->
+        <scene sceneID="LYW-Zh-gvk">
+            <objects>
+                <tabBarController storyboardIdentifier="LegislatorView" id="cbO-Ct-J7F" customClass="LegislatorTabBarController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bMc-ax-4EU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PVO-Fx-Ofn" kind="relationship" relationship="viewControllers" id="dXl-xz-cVR"/>
+                        <segue destination="88r-3N-gNf" kind="relationship" relationship="viewControllers" id="Gp7-7n-gd4"/>
+                        <segue destination="Uuy-a7-Lv2" kind="relationship" relationship="viewControllers" id="TFI-9e-DNg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdd-1y-hRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610" y="-1976"/>
+        </scene>
+        <!--Legislators-->
+        <scene sceneID="2Pl-dp-OeK">
+            <objects>
+                <viewController storyboardIdentifier="HouseViewController" id="RZh-9k-DSc" customClass="HouseViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xMu-Q5-gSi"/>
+                        <viewControllerLayoutGuide type="bottom" id="xsR-pF-2hO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zDZ-D1-Hb6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V48-sd-gnS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HouseTableCell" id="yBk-c0-yVR" customClass="HouseTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yBk-c0-yVR" id="nUo-He-7Gy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLD-KJ-UsO" userLabel="Legislator First Name">
+                                                    <rect key="frame" x="107" y="2" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-To-Pl5" userLabel="Legislator State">
+                                                    <rect key="frame" x="107" y="22" width="144" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKg-tZ-Y9b" userLabel="Legislator Last Name">
+                                                    <rect key="frame" x="225" y="2" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mxp-tI-TcB" userLabel="Legislator Image">
+                                                    <rect key="frame" x="32" y="2" width="49" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="legislatorFirstNameLabel" destination="vLD-KJ-UsO" id="C9U-9N-Aho"/>
+                                            <outlet property="legislatorImage" destination="Mxp-tI-TcB" id="Zch-JP-p4a"/>
+                                            <outlet property="legislatorLastNameLabel" destination="AKg-tZ-Y9b" id="7xK-eH-NbE"/>
+                                            <outlet property="legislatorStateLabel" destination="q0h-To-Pl5" id="FQH-dI-SZN"/>
+                                            <segue destination="yAa-Kk-Mef" kind="show" identifier="showDetails" id="ekv-s4-Tsw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Legislators" id="ivW-3Q-5lo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="MGc-qZ-p6v">
+                            <connections>
+                                <action selector="search_btn:" destination="RZh-9k-DSc" id="riL-yf-1V3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="MGc-qZ-p6v" id="sOg-D4-R6V"/>
+                        <outlet property="tableView" destination="V48-sd-gnS" id="DDu-wW-m0W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFQ-D2-Adl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="-1978.56071964018"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="gxq-YB-BvJ">
+            <objects>
+                <viewController storyboardIdentifier="LeftViewController" id="GeI-rh-VYU" customClass="LeftViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cXZ-Z9-Nls"/>
+                        <viewControllerLayoutGuide type="bottom" id="qnJ-tb-29p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uf6-UB-Vgz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wb9-G0-hr9">
+                                <rect key="frame" x="0.0" y="175" width="375" height="484"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeftMenuCell" id="dQG-jC-Dyz" customClass="LeftMenuCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQG-jC-Dyz" id="nh0-60-PhD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-eK-Ycs">
+                                                    <rect key="frame" x="37" y="8" width="126" height="27.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="126" id="edq-Fe-LYH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mFj-eK-Ycs" firstAttribute="leading" secondItem="nh0-60-PhD" secondAttribute="leadingMargin" constant="29" id="Fsq-kf-Tj7"/>
+                                                <constraint firstItem="mFj-eK-Ycs" firstAttribute="top" secondItem="nh0-60-PhD" secondAttribute="topMargin" id="UEm-N2-VVp"/>
+                                                <constraint firstItem="mFj-eK-Ycs" firstAttribute="bottom" secondItem="nh0-60-PhD" secondAttribute="bottomMargin" id="n1J-de-Mft"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuLabel" destination="mFj-eK-Ycs" id="0vX-VE-cKC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tSg-cG-fDf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="139"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qnJ-tb-29p" firstAttribute="top" secondItem="Wb9-G0-hr9" secondAttribute="bottom" constant="8" symbolic="YES" id="0BZ-KG-mTr"/>
+                            <constraint firstItem="tSg-cG-fDf" firstAttribute="leading" secondItem="Wb9-G0-hr9" secondAttribute="leading" id="0iU-QX-JTL"/>
+                            <constraint firstAttribute="trailing" secondItem="Wb9-G0-hr9" secondAttribute="trailing" id="7hQ-Mc-Iaz"/>
+                            <constraint firstItem="tSg-cG-fDf" firstAttribute="top" secondItem="cXZ-Z9-Nls" secondAttribute="bottom" constant="8" symbolic="YES" id="GlX-I4-W56"/>
+                            <constraint firstItem="tSg-cG-fDf" firstAttribute="trailing" secondItem="Wb9-G0-hr9" secondAttribute="trailing" id="HXb-Nj-iR5"/>
+                            <constraint firstItem="Wb9-G0-hr9" firstAttribute="top" secondItem="cXZ-Z9-Nls" secondAttribute="bottom" constant="155" id="OAy-jJ-h8Y"/>
+                            <constraint firstItem="Wb9-G0-hr9" firstAttribute="leading" secondItem="Uf6-UB-Vgz" secondAttribute="leading" id="hR3-gu-n9M"/>
+                            <constraint firstItem="Wb9-G0-hr9" firstAttribute="top" secondItem="tSg-cG-fDf" secondAttribute="bottom" constant="8" symbolic="YES" id="llt-Dl-PGO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="tSg-cG-fDf" id="ghs-mp-4Cr"/>
+                        <outlet property="tableView" destination="Wb9-G0-hr9" id="aiK-sY-0HU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npb-rI-Kig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608.8" y="-1285.9070464767617"/>
+        </scene>
+        <!--Legislators-->
+        <scene sceneID="FbS-4j-UUB">
+            <objects>
+                <viewController storyboardIdentifier="SenateViewController" id="R37-ZF-TmX" customClass="SenateViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vDX-bQ-3vk"/>
+                        <viewControllerLayoutGuide type="bottom" id="fRM-Fj-foK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9FQ-dd-BBD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jJ7-n7-Wl7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenateTableCell" id="R7s-SV-eG2" customClass="SenateTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R7s-SV-eG2" id="0rS-c1-Teo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nfp-FQ-LI7" userLabel="Legislator Image">
+                                                    <rect key="frame" x="33" y="2" width="49" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYm-Ma-PBY" userLabel="Legislator First Name">
+                                                    <rect key="frame" x="110" y="2" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plK-nk-hVZ" userLabel="Legislator State">
+                                                    <rect key="frame" x="110" y="22" width="144" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBy-pY-Zkh" userLabel="Legislator Last Name">
+                                                    <rect key="frame" x="232" y="2" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="legislatorFirstNameLabel" destination="wYm-Ma-PBY" id="zEc-zE-WCI"/>
+                                            <outlet property="legislatorImage" destination="Nfp-FQ-LI7" id="Vk3-mf-chP"/>
+                                            <outlet property="legislatorLastNameLabel" destination="mBy-pY-Zkh" id="50r-a6-Xl3"/>
+                                            <outlet property="legislatorStateLabel" destination="plK-nk-hVZ" id="MMI-1f-ncU"/>
+                                            <segue destination="yAa-Kk-Mef" kind="show" identifier="showDetails" id="Qmq-cV-vEb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Legislators" id="r0F-2b-3ko">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="9dh-zD-2de">
+                            <connections>
+                                <action selector="search_btn:" destination="R37-ZF-TmX" id="W8T-9a-d9I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="9dh-zD-2de" id="gVS-DA-8wI"/>
+                        <outlet property="tableView" destination="jJ7-n7-Wl7" id="Typ-eq-AYf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nza-v1-IBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="-1286.8065967016494"/>
+        </scene>
+        <!--Bills-->
+        <scene sceneID="kp5-0v-VFa">
+            <objects>
+                <viewController storyboardIdentifier="ActiveBillsViewController" id="iJL-Q3-Mad" customClass="ActiveBillsViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DRh-C1-LUK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fe0-Fc-Whw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXG-2d-RdS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y3c-hP-6lI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="582"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveBillsCell" rowHeight="120" id="VqV-H0-zZo" customClass="ActiveBillsTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VqV-H0-zZo" id="aQO-4g-gya">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejN-NM-kUa">
+                                                    <rect key="frame" x="8" y="8" width="359" height="95.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ejN-NM-kUa" firstAttribute="trailing" secondItem="aQO-4g-gya" secondAttribute="trailingMargin" id="aag-no-Uhu"/>
+                                                <constraint firstItem="ejN-NM-kUa" firstAttribute="leading" secondItem="aQO-4g-gya" secondAttribute="leadingMargin" id="fM6-Tz-aNW"/>
+                                                <constraint firstItem="ejN-NM-kUa" firstAttribute="bottom" secondItem="aQO-4g-gya" secondAttribute="bottomMargin" constant="-8" id="t2S-Af-aiV"/>
+                                                <constraint firstItem="ejN-NM-kUa" firstAttribute="top" secondItem="aQO-4g-gya" secondAttribute="top" constant="8" id="vCJ-v3-lYe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="billContentLabel" destination="ejN-NM-kUa" id="tOJ-i6-yNF"/>
+                                            <segue destination="nNS-DE-fwV" kind="show" identifier="showDetails" id="Uny-VA-I2y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y3c-hP-6lI" firstAttribute="top" secondItem="cXG-2d-RdS" secondAttribute="topMargin" constant="28" id="Chr-ez-Rvh"/>
+                            <constraint firstAttribute="trailing" secondItem="y3c-hP-6lI" secondAttribute="trailing" id="cPz-CA-kGb"/>
+                            <constraint firstItem="y3c-hP-6lI" firstAttribute="leading" secondItem="cXG-2d-RdS" secondAttribute="leading" id="ngu-0J-kI2"/>
+                            <constraint firstItem="Fe0-Fc-Whw" firstAttribute="top" secondItem="y3c-hP-6lI" secondAttribute="bottom" constant="8" symbolic="YES" id="r8d-VR-0EX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bills" id="BxG-vZ-9Wi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="f1y-eq-Hh8">
+                            <connections>
+                                <action selector="search_btn:" destination="iJL-Q3-Mad" id="SVZ-sz-ysY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="f1y-eq-Hh8" id="EFY-7U-fa5"/>
+                        <outlet property="tableView" destination="y3c-hP-6lI" id="IAs-Qt-Wub"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mt-Mb-R3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="-580.65967016491754"/>
+        </scene>
+        <!--Bills-->
+        <scene sceneID="BdV-d1-Fip">
+            <objects>
+                <viewController storyboardIdentifier="NewBillsViewController" id="WRM-Ma-XzO" customClass="NewBillsViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5kz-2r-aan"/>
+                        <viewControllerLayoutGuide type="bottom" id="UNk-so-RaP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E9r-iu-efi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-bK-8ox">
+                                <rect key="frame" x="0.0" y="28" width="375" height="582"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewBillsCell" rowHeight="120" id="hoB-QY-6kV" customClass="NewBillsTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hoB-QY-6kV" id="Qwm-XQ-fiY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hak-k2-ojE">
+                                                    <rect key="frame" x="8" y="8" width="359" height="95.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hak-k2-ojE" firstAttribute="leading" secondItem="Qwm-XQ-fiY" secondAttribute="leadingMargin" id="LW8-1M-cNu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hak-k2-ojE" secondAttribute="bottom" constant="8" id="Wc9-Of-EgG"/>
+                                                <constraint firstItem="hak-k2-ojE" firstAttribute="top" secondItem="Qwm-XQ-fiY" secondAttribute="top" constant="8" id="X5o-hQ-JbZ"/>
+                                                <constraint firstItem="hak-k2-ojE" firstAttribute="trailing" secondItem="Qwm-XQ-fiY" secondAttribute="trailingMargin" id="ZAk-TS-a4R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="billContentLabel" destination="hak-k2-ojE" id="zmH-FF-mva"/>
+                                            <segue destination="nNS-DE-fwV" kind="show" identifier="showDetails" id="by9-9t-lsF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gdg-bK-8ox" secondAttribute="trailing" id="1aC-Rz-jDW"/>
+                            <constraint firstItem="gdg-bK-8ox" firstAttribute="top" secondItem="E9r-iu-efi" secondAttribute="topMargin" constant="28" id="N4T-YL-77M"/>
+                            <constraint firstItem="gdg-bK-8ox" firstAttribute="leading" secondItem="E9r-iu-efi" secondAttribute="leading" id="eG4-rR-VCv"/>
+                            <constraint firstItem="UNk-so-RaP" firstAttribute="top" secondItem="gdg-bK-8ox" secondAttribute="bottom" constant="8" symbolic="YES" id="vEB-mf-Zh2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bills" id="NyS-3W-Vvr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="gAj-zR-eAi">
+                            <connections>
+                                <action selector="search_btn:" destination="WRM-Ma-XzO" id="7NP-k9-Wla"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="gAj-zR-eAi" id="Ipy-vj-hT3"/>
+                        <outlet property="tableView" destination="gdg-bK-8ox" id="FQ4-K9-9G1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Il-OE-ho2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="154.27286356821591"/>
+        </scene>
+        <!--Bill Details-->
+        <scene sceneID="ENS-hv-d0p">
+            <objects>
+                <viewController storyboardIdentifier="BillDetailsViewController" id="nNS-DE-fwV" customClass="BillDetailsViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="REJ-MG-9iY"/>
+                        <viewControllerLayoutGuide type="bottom" id="AV1-dh-9Cu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lb5-Fw-8QI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ABb-Ig-iN4">
+                                <rect key="frame" x="0.0" y="228" width="375" height="390"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BillDetailsCell" id="u6o-tQ-Z0d" customClass="BillDetailsTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u6o-tQ-Z0d" id="eqG-fj-FML">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75P-L7-vNI">
+                                                    <rect key="frame" x="30" y="0.0" width="108" height="35.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="108" id="Ce0-Cb-aSF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqs-zf-QBw">
+                                                    <rect key="frame" x="167" y="0.0" width="171" height="35.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="75P-L7-vNI" firstAttribute="bottom" secondItem="eqG-fj-FML" secondAttribute="bottomMargin" id="05A-rr-mtH"/>
+                                                <constraint firstItem="zqs-zf-QBw" firstAttribute="leading" secondItem="75P-L7-vNI" secondAttribute="trailing" constant="29" id="O2d-jl-Kb8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zqs-zf-QBw" secondAttribute="trailing" constant="29" id="QZC-8N-CRf"/>
+                                                <constraint firstItem="75P-L7-vNI" firstAttribute="leading" secondItem="eqG-fj-FML" secondAttribute="leadingMargin" constant="22" id="hl6-kD-8Rf"/>
+                                                <constraint firstItem="75P-L7-vNI" firstAttribute="top" secondItem="eqG-fj-FML" secondAttribute="top" id="nX6-3d-Ojb"/>
+                                                <constraint firstItem="75P-L7-vNI" firstAttribute="baseline" secondItem="zqs-zf-QBw" secondAttribute="baseline" id="tvi-Wz-UK1"/>
+                                                <constraint firstItem="75P-L7-vNI" firstAttribute="firstBaseline" secondItem="zqs-zf-QBw" secondAttribute="firstBaseline" id="xFk-GK-ZaP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailContentLabel" destination="zqs-zf-QBw" id="wGb-2d-lNo"/>
+                                            <outlet property="detailHeaderLabel" destination="75P-L7-vNI" id="TLJ-yQ-joq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh1-xq-NRy">
+                                <rect key="frame" x="16" y="98" width="343" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="laU-Jg-sms"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ABb-Ig-iN4" firstAttribute="bottom" secondItem="AV1-dh-9Cu" secondAttribute="top" id="9o3-b7-DlB"/>
+                            <constraint firstAttribute="trailing" secondItem="ABb-Ig-iN4" secondAttribute="trailing" id="Bc0-uP-N3H"/>
+                            <constraint firstItem="ABb-Ig-iN4" firstAttribute="top" secondItem="Sh1-xq-NRy" secondAttribute="bottom" constant="37" id="Ete-Ek-NBb"/>
+                            <constraint firstItem="Sh1-xq-NRy" firstAttribute="centerX" secondItem="ABb-Ig-iN4" secondAttribute="centerX" id="PAz-Do-rv8"/>
+                            <constraint firstItem="Sh1-xq-NRy" firstAttribute="leading" secondItem="Lb5-Fw-8QI" secondAttribute="leadingMargin" id="Plx-sY-g1A"/>
+                            <constraint firstItem="Sh1-xq-NRy" firstAttribute="top" secondItem="REJ-MG-9iY" secondAttribute="bottom" constant="34" id="r6W-hZ-wSm"/>
+                            <constraint firstItem="ABb-Ig-iN4" firstAttribute="leading" secondItem="Lb5-Fw-8QI" secondAttribute="leading" id="u9H-h6-Euh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bill Details" id="pjF-NM-PUf">
+                        <barButtonItem key="rightBarButtonItem" image="empty_star" id="HU8-b7-k94">
+                            <inset key="imageInsets" minX="25" minY="15" maxX="0.0" maxY="15"/>
+                            <connections>
+                                <action selector="favorite_btn:" destination="nNS-DE-fwV" id="Ygj-hE-1OD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="favoriteButton" destination="HU8-b7-k94" id="cBV-FC-uzG"/>
+                        <outlet property="tableView" destination="ABb-Ig-iN4" id="5RD-61-0RR"/>
+                        <outlet property="titleLabel" destination="Sh1-xq-NRy" id="ngb-do-u3m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQE-ie-4xm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4716" y="152.47376311844079"/>
+        </scene>
+        <!--Committees-->
+        <scene sceneID="Cq7-FP-S61">
+            <objects>
+                <viewController storyboardIdentifier="CommitteeHouseViewController" id="EXs-fq-GVs" customClass="HouseCommitteesViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UKL-37-7vH"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Q6-tm-akM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lsp-iT-ePJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h6N-lN-glh">
+                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HouseCommitteesCell" rowHeight="70" id="NjE-1b-Nld" customClass="HouseCommitteesTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NjE-1b-Nld" id="eN5-rx-MXk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQ2-li-1Ad">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlp-3o-4ZW">
+                                                    <rect key="frame" x="8" y="37" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="committeeIDLabel" destination="xlp-3o-4ZW" id="Ztw-ck-RNa"/>
+                                            <outlet property="committeeNameLabel" destination="hQ2-li-1Ad" id="7Ta-pU-DLj"/>
+                                            <segue destination="nAX-YD-h7q" kind="show" identifier="showDetails" id="4b8-9u-se6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Committees" id="Ar5-sW-zVc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Jik-eB-9Xf">
+                            <connections>
+                                <action selector="search_btn:" destination="EXs-fq-GVs" id="GIn-DA-ywa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="Jik-eB-9Xf" id="abH-x8-HIm"/>
+                        <outlet property="tableView" destination="h6N-lN-glh" id="jLY-47-dgy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkf-Hl-zzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="903.59820089955031"/>
+        </scene>
+        <!--Legislators-->
+        <scene sceneID="eW2-Pg-xQ7">
+            <objects>
+                <viewController storyboardIdentifier="StateViewController" id="I8I-WZ-F5j" customClass="StateViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Liu-QJ-Q68"/>
+                        <viewControllerLayoutGuide type="bottom" id="cqs-8y-lnP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XCL-bZ-m59">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLy-GP-ZbG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZqJ-A0-dAb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StateTableCell" id="xEz-Gb-gvM" customClass="StateTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xEz-Gb-gvM" id="gDo-6R-XvX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-5v-0qs" userLabel="Legislator Image">
+                                                    <rect key="frame" x="35" y="0.0" width="49" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-mi-kKx" userLabel="Legislator First Name">
+                                                    <rect key="frame" x="111" y="0.0" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-mm-ZWm" userLabel="Legislator Last Name">
+                                                    <rect key="frame" x="221" y="0.0" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDv-60-ICy" userLabel="Legislator State">
+                                                    <rect key="frame" x="111" y="18" width="144" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="legislatorFirstNameLabel" destination="JcJ-mi-kKx" id="NES-et-GK0"/>
+                                            <outlet property="legislatorImage" destination="ix8-5v-0qs" id="Jlo-d1-ZJV"/>
+                                            <outlet property="legislatorLastNameLabel" destination="ec4-mm-ZWm" id="5Ro-sX-87E"/>
+                                            <outlet property="legislatorStateLabel" destination="EDv-60-ICy" id="0rp-le-86E"/>
+                                            <segue destination="yAa-Kk-Mef" kind="show" identifier="showDetails" id="EZm-ut-VQM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Legislators" id="nUS-bp-hRV">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="u1e-Tg-jnz">
+                            <connections>
+                                <action selector="filterBtn:" destination="I8I-WZ-F5j" id="7dh-b8-GWP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pickerView" destination="QLy-GP-ZbG" id="Typ-lX-UyP"/>
+                        <outlet property="tableView" destination="ZqJ-A0-dAb" id="kG5-1r-BC5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4z8-JA-De2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="-2731.4842578710645"/>
+        </scene>
+        <!--Legislator Details-->
+        <scene sceneID="uMh-JG-zD6">
+            <objects>
+                <viewController storyboardIdentifier="LegislatorDetailsViewController" id="yAa-Kk-Mef" customClass="DetailsViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2q4-W9-hhT"/>
+                        <viewControllerLayoutGuide type="bottom" id="vH8-fl-83O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TlZ-pu-ZCo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-s1-DsS">
+                                <rect key="frame" x="0.0" y="288" width="375" height="330"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="details_cell" id="HSH-rH-bRz" customClass="DetailsTableViewCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HSH-rH-bRz" id="MlB-UU-M3b">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBT-Io-iQ3">
+                                                    <rect key="frame" x="36" y="11.5" width="115" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="9z5-16-kPx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSr-Lw-qpY">
+                                                    <rect key="frame" x="184" y="11.5" width="154" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TBT-Io-iQ3" firstAttribute="leading" secondItem="MlB-UU-M3b" secondAttribute="leadingMargin" constant="28" id="Ksc-dt-0oV"/>
+                                                <constraint firstItem="TBT-Io-iQ3" firstAttribute="baseline" secondItem="iSr-Lw-qpY" secondAttribute="baseline" id="UOx-El-lsj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iSr-Lw-qpY" secondAttribute="trailing" constant="29" id="Yad-P9-yTr"/>
+                                                <constraint firstItem="TBT-Io-iQ3" firstAttribute="centerY" secondItem="MlB-UU-M3b" secondAttribute="centerY" id="g8g-Et-Djn"/>
+                                                <constraint firstItem="iSr-Lw-qpY" firstAttribute="leading" secondItem="TBT-Io-iQ3" secondAttribute="trailing" constant="33" id="jJF-Ow-YYy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailContentLabel" destination="iSr-Lw-qpY" id="ImD-Bb-ebG"/>
+                                            <outlet property="detailHeaderLabel" destination="TBT-Io-iQ3" id="b3g-dF-yXM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-tq-HHG">
+                                <rect key="frame" x="105" y="90" width="165" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="7Nn-6U-CiB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bfz-s1-DsS" secondAttribute="trailing" id="5HZ-bh-Tb6"/>
+                            <constraint firstItem="Bfz-s1-DsS" firstAttribute="top" secondItem="fc8-tq-HHG" secondAttribute="bottom" constant="24" id="84U-JX-08q"/>
+                            <constraint firstItem="Bfz-s1-DsS" firstAttribute="leading" secondItem="TlZ-pu-ZCo" secondAttribute="leading" id="A10-By-83j"/>
+                            <constraint firstItem="Bfz-s1-DsS" firstAttribute="bottom" secondItem="vH8-fl-83O" secondAttribute="top" id="OUY-N7-sAV"/>
+                            <constraint firstItem="fc8-tq-HHG" firstAttribute="leading" secondItem="TlZ-pu-ZCo" secondAttribute="leadingMargin" constant="89" id="a4Q-xs-maF"/>
+                            <constraint firstItem="fc8-tq-HHG" firstAttribute="top" secondItem="2q4-W9-hhT" secondAttribute="bottom" constant="26" id="nq4-js-7dm"/>
+                            <constraint firstItem="fc8-tq-HHG" firstAttribute="centerX" secondItem="Bfz-s1-DsS" secondAttribute="centerX" id="oTC-Ip-IZb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Legislator Details" id="KHs-WB-tUY">
+                        <barButtonItem key="rightBarButtonItem" image="empty_star" id="eTz-g6-w1e" userLabel="Favorite">
+                            <inset key="imageInsets" minX="25" minY="15" maxX="0.0" maxY="15"/>
+                            <connections>
+                                <action selector="favorite_btn:" destination="yAa-Kk-Mef" id="otd-Mv-QBN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="favoriteButton" destination="eTz-g6-w1e" id="9AO-E4-JAw"/>
+                        <outlet property="imageView" destination="fc8-tq-HHG" id="GrR-WX-A8T"/>
+                        <outlet property="tableView" destination="Bfz-s1-DsS" id="snu-4g-Yzj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfo-xJ-Q0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4716" y="-1978.56071964018"/>
+        </scene>
+        <!--Bill Tab Bar Controller-->
+        <scene sceneID="4C0-Sn-Nwb">
+            <objects>
+                <tabBarController storyboardIdentifier="BillView" id="dpd-LU-YpK" customClass="BillTabBarController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AnC-WS-RNn"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5df-PL-zT9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DDY-gn-hIG" kind="relationship" relationship="viewControllers" id="NGW-65-9j9"/>
+                        <segue destination="OAC-hk-2v0" kind="relationship" relationship="viewControllers" id="jAS-UI-sRZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="056-2A-QdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="156"/>
+        </scene>
+        <!--State-->
+        <scene sceneID="MIN-lM-szN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PVO-Fx-Ofn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="State" id="GRV-jf-koz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OgP-ac-LNW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I8I-WZ-F5j" kind="relationship" relationship="rootViewController" id="vUf-7Q-iwr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpL-Ev-UeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="-2731.4842578710645"/>
+        </scene>
+        <!--House-->
+        <scene sceneID="Jh7-QA-Lvg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="88r-3N-gNf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="House" id="amO-7X-Vz9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXf-cB-BkN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RZh-9k-DSc" kind="relationship" relationship="rootViewController" id="eeF-GN-msr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxx-xr-qi3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="-1978.56071964018"/>
+        </scene>
+        <!--Senate-->
+        <scene sceneID="2j7-wZ-Tx6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uuy-a7-Lv2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Senate" id="noZ-dP-FZ0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E3V-h7-FhB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R37-ZF-TmX" kind="relationship" relationship="rootViewController" id="HXy-Qr-Srb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAd-VG-Lwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="-1286.8065967016494"/>
+        </scene>
+        <!--Active-->
+        <scene sceneID="iGy-b5-eER">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DDY-gn-hIG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Active" id="UW4-nA-NrM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nau-5o-znN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iJL-Q3-Mad" kind="relationship" relationship="rootViewController" id="lj3-53-l08"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rtk-Pe-paj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="-580.65967016491754"/>
+        </scene>
+        <!--New-->
+        <scene sceneID="6e1-p4-Ufi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OAC-hk-2v0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New" id="1Kz-Gu-n3i"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bui-Os-tig">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WRM-Ma-XzO" kind="relationship" relationship="rootViewController" id="lIx-0r-T5u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thd-im-nSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="154.27286356821591"/>
+        </scene>
+        <!--House-->
+        <scene sceneID="NYs-Kj-4Hx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CPP-vu-j5o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="House" id="RAw-lr-Y1n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b3B-t4-GD6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EXs-fq-GVs" kind="relationship" relationship="rootViewController" id="jZd-Kc-1Ys"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOo-k0-p4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="903.59820089955031"/>
+        </scene>
+        <!--Senate-->
+        <scene sceneID="12j-op-BQp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fcq-ds-Uxb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Senate" id="73u-Me-qJK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="roY-A7-Jse">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x4D-cb-FGn" kind="relationship" relationship="rootViewController" id="Hkq-6W-pSO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PcN-F8-DpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="1619.6401799100452"/>
+        </scene>
+        <!--Joint-->
+        <scene sceneID="HRZ-JR-B9U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DEt-kK-dvY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Joint" id="cQe-IF-fFy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hxB-n5-Xki">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YCG-Ic-8KA" kind="relationship" relationship="rootViewController" id="8dU-7P-m3I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7J-sq-6Bp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="2300.5997001499254"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="qFg-LI-fQe">
+            <objects>
+                <viewController id="070-kY-dJ4" customClass="FavorBillsViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ebt-6T-9cv"/>
+                        <viewControllerLayoutGuide type="bottom" id="SAf-Rn-vr2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EEa-xY-0xh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xas-Vh-8D2">
+                                <rect key="frame" x="0.0" y="42" width="375" height="582"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavorBillCell" rowHeight="120" id="zNO-iR-GHT" customClass="FavorBillCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zNO-iR-GHT" id="k4D-z8-k70">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2X-KR-U3l">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="billContentLabel" destination="n2X-KR-U3l" id="O8n-Ly-udK"/>
+                                            <segue destination="nNS-DE-fwV" kind="show" identifier="showDetails" id="PPC-vE-QUk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite" id="ZF6-2d-tDl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="PAR-RI-iIE">
+                            <connections>
+                                <action selector="search_btn:" destination="070-kY-dJ4" id="iRs-xc-cvB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="PAR-RI-iIE" id="md8-Wq-ELd"/>
+                        <outlet property="tableView" destination="xas-Vh-8D2" id="1Tc-a5-TYh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84U-7z-pxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="3719.1904047976013"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="vVk-03-edr">
+            <objects>
+                <viewController id="yTZ-0s-ktG" customClass="FavorCommitteesViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RhN-dp-Bxu"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ed-mV-Zz8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R03-BO-5SL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6I1-50-RYg">
+                                <rect key="frame" x="0.0" y="38" width="375" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavorCommitteeCell" rowHeight="70" id="UVF-7B-VG5" customClass="FavorCommitteeCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UVF-7B-VG5" id="WzX-Mx-zSm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAQ-dd-do3">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuK-6B-Fal">
+                                                    <rect key="frame" x="8" y="37" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="committeeIDLabel" destination="BuK-6B-Fal" id="fLY-xK-n9j"/>
+                                            <outlet property="committeeNameLabel" destination="EAQ-dd-do3" id="jpR-h8-tll"/>
+                                            <segue destination="nAX-YD-h7q" kind="show" identifier="showDetails" id="ERE-Uj-pYe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite" id="thr-Yt-nBb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="FQI-95-y0S">
+                            <connections>
+                                <action selector="search_btn:" destination="yTZ-0s-ktG" id="421-RA-Pok"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="FQI-95-y0S" id="f5a-0R-W2f"/>
+                        <outlet property="tableView" destination="6I1-50-RYg" id="SiX-gg-Xsn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xa6-L5-g3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="4462.2188905547227"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="ITy-nj-4EM">
+            <objects>
+                <viewController id="9Zw-GD-MPD" customClass="FavorLegislatorsViewController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ol-wG-Eie"/>
+                        <viewControllerLayoutGuide type="bottom" id="ODA-Qb-6Xa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ijg-oI-DZy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YKl-ng-AyX">
+                                <rect key="frame" x="0.0" y="34" width="375" height="598"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavorLegislatorCell" id="Hfo-2d-qOq" customClass="FavorLegislatorCell" customModule="Congress2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hfo-2d-qOq" id="5bN-4G-hpw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsm-mS-O28" userLabel="Legislator First Name">
+                                                    <rect key="frame" x="107" y="2" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKE-JV-jKN" userLabel="Legislator State">
+                                                    <rect key="frame" x="107" y="22" width="144" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRY-lY-Fia" userLabel="Legislator Last Name">
+                                                    <rect key="frame" x="225" y="2" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfr-Kt-0o4" userLabel="Legislator Image">
+                                                    <rect key="frame" x="32" y="2" width="49" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="legislatorFirstNameLabel" destination="dsm-mS-O28" id="kfF-jh-OvQ"/>
+                                            <outlet property="legislatorImage" destination="bfr-Kt-0o4" id="eeH-Am-dbe"/>
+                                            <outlet property="legislatorLastNameLabel" destination="iRY-lY-Fia" id="z3a-7C-EIc"/>
+                                            <outlet property="legislatorStateLabel" destination="dKE-JV-jKN" id="QHy-IE-gvY"/>
+                                            <segue destination="yAa-Kk-Mef" kind="show" identifier="showDetails" id="0nb-8e-lds"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite" id="g8V-ch-hwf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="vXJ-nr-yO0">
+                            <connections>
+                                <action selector="search_btn:" destination="9Zw-GD-MPD" id="BDw-zr-RZC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="vXJ-nr-yO0" id="J7i-hh-dou"/>
+                        <outlet property="tableView" destination="YKl-ng-AyX" id="C13-Rb-vQd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oef-gs-2K7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="3015.7421289355325"/>
+        </scene>
+        <!--Favorite Tab Bar Controller-->
+        <scene sceneID="W4v-ha-dsc">
+            <objects>
+                <tabBarController storyboardIdentifier="FavoriteView" id="LrM-fE-qgr" customClass="FavoriteTabBarController" customModule="Congress2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="pqf-l6-ZAk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OYI-o5-aug" kind="relationship" relationship="viewControllers" id="d1X-rQ-uPd"/>
+                        <segue destination="U0i-at-Fki" kind="relationship" relationship="viewControllers" id="TMf-Oe-2c7"/>
+                        <segue destination="BdC-eA-bzu" kind="relationship" relationship="viewControllers" id="EFx-6G-Ilx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FrF-85-qMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="3720"/>
+        </scene>
+        <!--Legislators-->
+        <scene sceneID="VCs-Bj-WKd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OYI-o5-aug" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Legislators" id="0bp-MF-KND" userLabel="Legislators"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="es8-Io-o2r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Zw-GD-MPD" kind="relationship" relationship="rootViewController" id="tr4-Ph-3Ls"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0b-Ez-U2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="3015.7421289355325"/>
+        </scene>
+        <!--Bills-->
+        <scene sceneID="6h1-bo-maR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U0i-at-Fki" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bills" id="bkA-SD-69d" userLabel="Bills"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="csI-7Z-31j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="070-kY-dJ4" kind="relationship" relationship="rootViewController" id="2sN-ww-ssB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXt-QP-hw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="3719.1904047976013"/>
+        </scene>
+        <!--Committees-->
+        <scene sceneID="O83-bU-Cmy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BdC-eA-bzu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Committees" id="uoB-P8-eyc" userLabel="Committees"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BrL-XZ-TxV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yTZ-0s-ktG" kind="relationship" relationship="rootViewController" id="G4O-OP-dKQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOb-Nj-kZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="4462.2188905547227"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="empty_star" width="50" height="50"/>
+        <image name="my_photo" width="600" height="600"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ERE-Uj-pYe"/>
+        <segue reference="PPC-vE-QUk"/>
+        <segue reference="0nb-8e-lds"/>
+    </inferredMetricsTieBreakers>
+</document>
