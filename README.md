@@ -13,7 +13,7 @@ Since January 2017, the website is simply serviced by University of Southern Cal
 
 ## iOS App 
 Dynamic activity indicator | Homepage | Search | Details | Menu
---- | --- | ---
+--- | --- | --- | --- | --- 
 ![Homepage of App](https://i.imgur.com/SWgrA9t.png) | ![Search](https://i.imgur.com/jUnxu3I.png) | ![Details](https://i.imgur.com/qjxpizj.png) | ![Menu](https://i.imgur.com/MR32645.png) | ![Dynamic activity indicator](https://i.imgur.com/SE1Haa3.png)
 
 
